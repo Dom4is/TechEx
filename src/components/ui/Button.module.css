@@ -1,0 +1,16 @@
+.btn {
+  font-weight: 500;
+  font-size: 14px;
+  background-color: #00e4f0;
+  color: black;
+  width: 334px;
+  height: 36px;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  box-shadow: 0 0 8px 4px #00e4f0;
+}
