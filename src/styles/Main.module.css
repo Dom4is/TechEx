@@ -71,3 +71,61 @@
   width: 63.5px;
   height: 60px;
 }
+
+.centeredText {
+  margin-top: 70px;
+  margin-bottom: 40px;
+  margin-left: 70px;
+}
+
+.brands {
+  width: 1400px;
+  height: 80px;
+  background-color: #000000;
+}
+
+.routerImg2 {
+  height: 308px;
+  width: 793px;
+  border-radius: 8px;
+}
+
+.trainImg {
+  width: 678px;
+  height: 452px;
+  border-radius: 8px;
+}
+
+.infoText {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.macbookImg {
+  height: 452px;
+  width: 793px;
+  border-radius: 8px;
+}
+
+.gradientDiv {
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ff4c00, #b38bce, #00e4f0);
+  padding: 20px;
+  padding-right: 90px;
+}
+
+.routerImg3 {
+  width: 678px;
+  height: 398px;
+  border-radius: 8px;
+}
+
+.blackFont {
+  color: #000000;
+}
+
+.wiredCardText {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: normal;
+}

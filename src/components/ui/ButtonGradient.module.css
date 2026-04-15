@@ -1,0 +1,32 @@
+.btn {
+  position: relative; /* Обязательно для позиционирования свечения */
+  z-index: 1; /* Кнопка отображается поверх эффекта */
+  font-weight: 500;
+  font-size: 14px;
+  background: linear-gradient(45deg, #ff4c00, #b38bce, #00e4f0);
+  color: black;
+  width: 334px;
+  height: 36px;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  /* transition для box-shadow убран, анимация теперь идёт через ::after */
+}
+
+/* Свечение при наведении */
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: -4px; /* Точная замена spread: 4px */
+  background: inherit; /* Автоматически копирует градиент кнопки */
+  border-radius: inherit;
+  filter: blur(8px); /* Точная замена blur: 8px */
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover::after {
+  opacity: 1;
+}

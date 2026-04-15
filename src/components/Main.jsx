@@ -1,4 +1,6 @@
 import { Button } from "./ui/Button";
+import { ButtonGradient } from "./ui/ButtonGradient";
+import TestimonialsSlider from "./ui/TestimonialsSlider";
 import styles from "../styles/Main.module.css";
 export function Main() {
   return (
@@ -64,6 +66,137 @@ export function Main() {
           </h4>
         </div>
       </section>
+      <h2 className={styles.centeredText}>500+ КЛИЕНТОВ УЖЕ С НАМИ</h2>
+      <div className={styles.brands}>Latter</div>
+      <h2 className={styles.centeredText}>ТЕХНОЛОГИЯ</h2>
+      <main className={styles.main}>
+        <img
+          src="/router-levitating2.jpg"
+          alt=""
+          className={styles.routerImg2}
+        />
+        <div className={styles.wiredCard}>
+          <p>
+            Прокачайте свой интернет <br />с высокоскоростными технологиями
+            mrnet. <br /> Наш мультироутер суммирует несколько <br /> каналов
+            связи в один (технология бондинг), <br /> значительно повышая
+            устойчивость <br /> и скорость соединения! <br />
+          </p>
+          <br />
+          <Button style={{ marginTop: "20px" }} value={"Узнать больше"} />
+        </div>
+      </main>
+      <main className={styles.main}>
+        <div>
+          <h2>НЕ БАЛАНСИРУЕМ</h2>
+          <img src="/train.jpg" alt="" className={styles.trainImg} />
+        </div>
+        <div>
+          <h2>А СУММИРУЕМ</h2>
+          <img src="/modern-train.jpg" alt="" className={styles.trainImg} />
+        </div>
+      </main>
+      <h2 className={styles.centeredText}>
+        {"Настраивайте сеть и управляйте всеми".toUpperCase()} <br />
+        {"устройствами через единый личный кабинет".toUpperCase()}
+      </h2>
+      <section className={styles.cards}>
+        <div style={{ gap: "12px", display: "flex", flexDirection: "column" }}>
+          <div className={styles.card} style={{ width: "570px" }}>
+            <h3>МОНИТОРИНГ</h3> <br />
+            <span className={styles.infoText}>
+              Графики потребления трафика <br /> <br />
+              Просмотр подключенных к мультироутеру сетевых устройств
+            </span>
+          </div>
+          <div className={styles.card} style={{ width: "570px" }}>
+            <h3>ТОНКАЯ НАСТРОЙКА</h3> <br />
+            <br />
+            <span className={styles.infoText}>
+              Настройка тоннелей PPTP, L2TP, GRE, IPIP <br />
+              <br /> Настройка пробросов портов
+            </span>
+          </div>
+        </div>
+        <img src="/macbook.jpg" alt="" className={styles.macbookImg} />
+      </section>
+
+      <div
+        style={{ display: "grid", placeItems: "center", margin: "35px auto" }}
+      >
+        <Button value={"Испытать все возможности"} />
+      </div>
+      <section className={styles.main}>
+        <div className={styles.wiredCard}>
+          <h3>{"Ценим ваше время".toUpperCase()}</h3>
+          <br />
+          <br />
+          <span className={styles.wiredCardText}>
+            Подключите мультироутер <br />с быстрым интернетом всего за 7 минут.
+            Наши
+            <br /> устройства работают по принципу <br />
+            Plug'n'Play (подключи и пользуйся). <br /> <br /> Вы получаете
+            надёжную связь и отсутствие <br /> головной боли в виде договоров с
+            разными
+            <br />
+            провайдерами
+          </span>
+        </div>
+        <div className={styles.wiredCard}>
+          <h3>{"Безграничные Возможности".toUpperCase()}</h3>
+          <br />
+          <br />
+          <span className={styles.wiredCardText}>
+            Подберём оборудование для новых точек <br /> и оперативно подключим
+            к интернету <br /> по любому адресу. <br />
+            <br />
+            Всё это — без необходимости заключения <br /> дополнительных
+            контрактов
+          </span>
+        </div>
+        <div className={styles.wiredCard}>
+          <h3>{"Индивидуальный подход".toUpperCase()}</h3>
+          <br />
+          <br />
+          <span className={styles.wiredCardText}>
+            Мы всегда идем навстречу клиенту, <br />
+            предлагая оптимальное по стоимости <br />
+            решение. <br />
+            <br />
+            Заполните заявку, и в рабочее время мы <br />
+            за 1 час сделаем расчёт
+          </span>
+        </div>
+      </section>
+      <section className={styles.main} style={{ marginTop: "0" }}>
+        <div className={styles.gradientDiv}>
+          <span
+            className={styles.blackFont}
+            style={{ fontSize: "45px", fontWeight: "500" }}
+          >
+            {"Попробуйте".toUpperCase()} <br />
+            {"14 дней бесплатно".toUpperCase()}
+          </span>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <p className={styles.blackFont}>
+            Развивайте свою инфру с mrnet. Без лишних <br />
+            затрат и костылей. Высокоскоростной интернет — <br /> удобно,
+            эффективно!
+          </p>
+        </div>
+
+        <img src="/router3.jpg" alt="" className={styles.routerImg3} />
+      </section>
+      <div
+        style={{ display: "grid", placeItems: "center", margin: "35px auto" }}
+      >
+        <ButtonGradient value={"Начать"} />
+      </div>
+      <TestimonialsSlider />
     </>
   );
 }
