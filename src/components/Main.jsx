@@ -126,6 +126,9 @@ export function Main() {
       >
         <Button value={"Испытать все возможности"} />
       </div>
+      <h2 className={styles.centeredText}>
+        {"Решение, созданное айтишниками для айтишников".toUpperCase()}
+      </h2>
       <section className={styles.main}>
         <div className={styles.wiredCard}>
           <h3>{"Ценим ваше время".toUpperCase()}</h3>
@@ -194,9 +197,42 @@ export function Main() {
       <div
         style={{ display: "grid", placeItems: "center", margin: "35px auto" }}
       >
-        <ButtonGradient value={"Начать"} />
+        <h2></h2>
+        <ButtonGradient value={"Начать!"} />
       </div>
+      <h2 className={styles.centeredText}>
+        {"95% клиентов выбирают mrnet после тест-драйва".toUpperCase()}
+      </h2>
       <TestimonialsSlider />
+      <h2 className={styles.centeredText}>
+        {"Подключаем к стабильному интернету по всей России".toUpperCase()}
+      </h2>
+      <div
+        className={styles.main}
+        style={{
+          border: "1px solid #FF4C00",
+          borderRadius: "8px",
+          padding: "50px",
+          justifyContent: "normal",
+        }}
+      >
+        <img src="/Map_Russia.png" alt="" />
+      </div>
+      <section className={styles.main}>
+        <div className={styles.gradientDiv} style={{}}>
+          <h2></h2>
+        </div>
+        <form action="" method="post" className={styles.card}>
+          <h4></h4>
+          <input type="text" className={styles.inputs} />
+          <span style={{ fontSize: "18px" }}></span>
+          <input type="number" name="" id="" className={styles.inputs} />
+          <input type="text" className={styles.inputs} />
+          <input type="checkbox" name="" id="" />
+          <span></span>
+          <ButtonGradient value={"Начать!"} />
+        </form>
+      </section>
     </>
   );
 }

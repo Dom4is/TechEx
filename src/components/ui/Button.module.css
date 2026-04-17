@@ -10,6 +10,7 @@
   border: none;
   transition: box-shadow 0.2s ease;
   cursor: pointer;
+  letter-spacing: inherit;
 }
 
 .btn:hover {
