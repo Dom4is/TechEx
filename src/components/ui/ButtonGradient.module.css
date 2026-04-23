@@ -3,7 +3,7 @@
   z-index: 1; /* Кнопка отображается поверх эффекта */
   font-weight: 500;
   font-size: 20px;
-  background: linear-gradient(45deg, #ff4c00, #b38bce, #00e4f0);
+  background: linear-gradient(45deg, #00e4f0, #b38bce, #ff4c00);
   color: black;
   width: 334px;
   height: 52px;

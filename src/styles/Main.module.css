@@ -129,3 +129,31 @@
   font-weight: 400;
   letter-spacing: normal;
 }
+
+.inputs {
+  width: 827px;
+  height: 52px;
+  border-radius: 30px;
+  border: 1px solid #00e4f0;
+  background-color: #000000;
+  margin: 12px;
+  padding: 13px;
+  padding-left: 30px;
+}
+
+.netForm {
+  padding: 20px;
+  background: linear-gradient(45deg, #000000, #000000, #00e4f0);
+  border-radius: 8px;
+  border: 1px solid #00e4f0;
+}
+
+.checkboxGroup {
+  display: flex;
+  gap: 10px;
+}
+
+.checkboxGroup input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
