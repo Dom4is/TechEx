@@ -60,8 +60,10 @@ export default function TestimonialsSlider() {
             {testimonials.map((item, index) => (
               <div key={index} className="testimonial-card">
                 <div className="card-header">
-                  <div className="company">{item.company}</div>
-                  <div className="author">{item.author}</div>
+                  <div className="description">
+                    <div className="company">{item.company}</div>
+                    <div className="author">{item.author}</div>
+                  </div>
                   <div className="role">{item.role}</div>
                 </div>
                 <p className="text">{item.text}</p>

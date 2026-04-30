@@ -1,6 +1,6 @@
 .testimonials-slider {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1450px;
+  margin: 0 36px;
   padding: 40px 20px;
 }
 
@@ -29,13 +29,14 @@
 
 /* Карточка отзыва */
 .testimonial-card {
-  flex: 0 0 300px; /* Фиксированная ширина */
-  background: linear-gradient(135deg, #001f3f, #003366);
+  flex: 0 0 560px; /* Фиксированная ширина */
+  background: linear-gradient(45deg, #000000, #000000, #00e4f0);
   color: white;
-  padding: 24px;
-  border-radius: 12px;
+  border: 1px solid #00e4f0;
+  padding: 20px;
+  border-radius: 8px;
   min-height: 320px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); */
   position: relative;
   overflow: hidden;
 }
@@ -43,9 +44,9 @@
 /* Заголовок компании */
 .card-header .company {
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 0.7em;
   margin-bottom: 4px;
-  color: #4fc3f7;
+  color: #00e4f0;
   text-shadow: 0 0 5px rgba(79, 195, 247, 0.3);
 }
 
@@ -53,7 +54,7 @@
 .card-header .author {
   font-weight: 600;
   margin-bottom: 2px;
-  font-size: 1.05em;
+  font-size: 0.9em;
 }
 
 .card-header .role {
@@ -98,7 +99,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.4);
+  /* background: rgba(0, 0, 0, 0.4); */
   color: #4fc3f7;
   border: none;
   cursor: pointer;
