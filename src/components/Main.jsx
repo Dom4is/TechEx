@@ -224,11 +224,12 @@ export function Main() {
           className={styles.gradientDiv}
           style={{
             color: "black",
-            paddingRight: "190px",
+            paddingRight: "150px",
             paddingBottom: "90px",
+            textTransform: "uppercase",
           }}
         >
-          <h2>
+          <h2 style={{ fontWeight: "500" }}>
             Хотите узнать <br />
             больше, <br /> рассчитать <br />
             стоимость <br />

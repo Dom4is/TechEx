@@ -2,7 +2,7 @@
   display: flex;
   gap: 12px;
   margin: 36px;
-  justify-content: center;
+  /* justify-content: center; */
   /* letter-spacing: 3px; */
 }
 
@@ -11,7 +11,7 @@
   border: 1px solid #ff4c00;
   border-radius: 8px;
   padding: 20px;
-  padding-right: 25px;
+  padding-right: 40px;
 }
 
 .list {
@@ -33,6 +33,7 @@
   width: 563px;
   height: 525px;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .btn {
@@ -42,7 +43,8 @@
 .cards {
   display: flex;
   gap: 12px;
-  justify-content: center;
+  /* justify-content: center; */
+  margin: 0 36px;
 }
 
 .card {
@@ -75,7 +77,7 @@
 .centeredText {
   margin-top: 70px;
   margin-bottom: 40px;
-  margin-left: 70px;
+  margin-left: 36px;
 }
 
 .brands {
@@ -88,12 +90,14 @@
   height: 308px;
   width: 793px;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .trainImg {
   width: 678px;
   height: 452px;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .infoText {
@@ -105,6 +109,7 @@
   height: 452px;
   width: 793px;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .gradientDiv {
@@ -118,6 +123,7 @@
   width: 678px;
   height: 398px;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .blackFont {

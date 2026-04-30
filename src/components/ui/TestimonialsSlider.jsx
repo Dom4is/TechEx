@@ -1,4 +1,4 @@
-// App.jsx или любой компонент
+// TestimonialsSlider.jsx
 import React, { useState } from "react";
 import "./TestimonialsSlider.css";
 
@@ -21,54 +21,79 @@ const testimonials = [
     role: "Руководитель",
     text: "Когда бизнес расширяется, особенно важна скорость партнёров и готовность помочь. Когда у провайдера в Великом Новгороде случилась авария, mrnet за несколько часов доставили мультироутер и удаленно настроили соединение в 8 из 12 наших аптек. Удобство подключения, возможность удаленного контроля всех точек из одного кабинета  и реактивная поддержка в telegram — важные преимущества mrnet!",
   },
+  // 🔹 Добавим 4-й отзыв для демонстрации прокрутки
+  {
+    company: "ПЯТЁРОЧКА",
+    author: "Анна Волкова",
+    role: "Региональный IT-менеджер",
+    text: "Стабильность связи — критически важна для ритейла. После перехода на оборудование mrnet мы сократили простои оборудования на 70%. Особенно ценим централизованное управление: можем мониторить трафик, перезагружать устройства и обновлять настройки без выезда в магазин. Интеграция с нашими внутренними системами прошла гладко, а техподдержка всегда на связи — даже ночью. Рекомендуем mrnet сетевым компаниям, где каждая минута простоя стоит денег.",
+  },
 ];
 
 export default function TestimonialsSlider() {
-  const [current, setCurrent] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const next = () => {
-    setCurrent((prev) => (prev + 1) % testimonials.length);
+  const nextSlide = () => {
+    if (currentIndex < testimonials.length - 1) {
+      setCurrentIndex((prev) => prev + 1);
+    }
   };
 
-  const prev = () => {
-    setCurrent(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
-    );
+  const prevSlide = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex((prev) => prev - 1);
+    }
   };
 
   return (
-    <div className="slider-container">
-      <div className="slider-wrapper">
-        {testimonials.map((item, index) => (
+    <div className="testimonials-slider">
+      {/* Контейнер с фиксированной высотой как на изображении */}
+      <div className="slider-container">
+        <div className="slider-viewport">
           <div
-            key={index}
-            className={`slide ${index === current ? "active" : ""}`}
-            style={{ transform: `translateX(${(index - current) * 100}%)` }}
+            className="slider-track"
+            style={{
+              transform: `translateX(-${currentIndex * 320}px)`,
+              width: `${testimonials.length * 320}px`,
+            }}
           >
-            <div className="card">
-              <div className="card-header">
-                <div className="company">{item.company}</div>
-                <div className="author">{item.author}</div>
-                <div className="role">{item.role}</div>
+            {testimonials.map((item, index) => (
+              <div key={index} className="testimonial-card">
+                <div className="card-header">
+                  <div className="company">{item.company}</div>
+                  <div className="author">{item.author}</div>
+                  <div className="role">{item.role}</div>
+                </div>
+                <p className="text">{item.text}</p>
               </div>
-              <p className="text">{item.text}</p>
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
 
-      <div className="controls">
-        <button onClick={prev} className="arrow"></button>
+      {/* Управление */}
+      <div className="slider-controls">
+        <button
+          onClick={prevSlide}
+          disabled={currentIndex === 0}
+          className="nav-btn prev"
+        ></button>
+
         <div className="dots">
           {testimonials.map((_, i) => (
-            <span
+            <button
               key={i}
-              className={`dot ${i === current ? "active" : ""}`}
-              onClick={() => setCurrent(i)}
+              onClick={() => setCurrentIndex(i)}
+              className={`dot ${i === currentIndex ? "active" : ""}`}
             />
           ))}
         </div>
-        <button onClick={next} className="arrow"></button>
+
+        <button
+          onClick={nextSlide}
+          disabled={currentIndex === testimonials.length - 1}
+          className="nav-btn next"
+        ></button>
       </div>
     </div>
   );
