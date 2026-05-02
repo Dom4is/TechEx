@@ -1,7 +1,7 @@
-import { Button } from "./ui/Button";
-import { ButtonGradient } from "./ui/ButtonGradient";
-import TestimonialsSlider from "./ui/TestimonialsSlider";
-import Test from "./ui/Test";
+// import classNames from "classnames";
+import { Button } from "./ui/Button/Button";
+import { ButtonGradient } from "./ui/ButtonGradient/ButtonGradient";
+import TestimonialsSlider from "./ui/Slider/TestimonialsSlider";
 import styles from "../styles/Main.module.css";
 export function Main() {
   return (
@@ -30,6 +30,7 @@ export function Main() {
             <li>Простое подключение за 7 минут</li>
             <li>Моментальная техподдержка 24/7 в Telegram</li>
           </ul>
+          <br />
           <span className={styles.info}>
             * Без учета стоимости оборудования, возможен выкуп оборудования или
             аренда, стоимость <br /> будет зависеть от модели мультироутера
@@ -76,7 +77,7 @@ export function Main() {
           alt=""
           className={styles.routerImg2}
         />
-        <div className={styles.wiredCard}>
+        <div className={styles.wiredCard} style={{ paddingRight: "40px" }}>
           <p>
             Прокачайте свой интернет <br />с высокоскоростными технологиями
             mrnet. <br /> Наш мультироутер суммирует несколько <br /> каналов
@@ -105,6 +106,7 @@ export function Main() {
         <div style={{ gap: "12px", display: "flex", flexDirection: "column" }}>
           <div className={styles.card} style={{ width: "570px" }}>
             <h3>МОНИТОРИНГ</h3> <br />
+            <br />
             <span className={styles.infoText}>
               Графики потребления трафика <br /> <br />
               Просмотр подключенных к мультироутеру сетевых устройств
@@ -112,6 +114,7 @@ export function Main() {
           </div>
           <div className={styles.card} style={{ width: "570px" }}>
             <h3>ТОНКАЯ НАСТРОЙКА</h3> <br />
+            <br />
             <br />
             <span className={styles.infoText}>
               Настройка тоннелей PPTP, L2TP, GRE, IPIP <br />
@@ -128,9 +131,12 @@ export function Main() {
         <Button value={"Испытать все возможности"} />
       </div>
       <h2 className={styles.centeredText}>
-        {"Решение, созданное айтишниками для айтишников".toUpperCase()}
+        {"Решение, созданное айтишниками".toUpperCase()}
+        <br />
+        {"для айтишников".toUpperCase()}
       </h2>
-      <section className={styles.main}>
+
+      <section className={styles.main} style={{ marginBottom: "12px" }}>
         <div className={styles.wiredCard}>
           <h3>{"Ценим ваше время".toUpperCase()}</h3>
           <br />
@@ -147,7 +153,8 @@ export function Main() {
           </span>
         </div>
         <div className={styles.wiredCard}>
-          <h3>{"Безграничные Возможности".toUpperCase()}</h3>
+          <h3>{"Безграничные".toUpperCase()}</h3>
+          <h3>{"Возможности".toUpperCase()}</h3>
           <br />
           <br />
           <span className={styles.wiredCardText}>
@@ -159,7 +166,8 @@ export function Main() {
           </span>
         </div>
         <div className={styles.wiredCard}>
-          <h3>{"Индивидуальный подход".toUpperCase()}</h3>
+          <h3>{"Индивидуальный".toUpperCase()}</h3>
+          <h3>{"подход".toUpperCase()}</h3>
           <br />
           <br />
           <span className={styles.wiredCardText}>
@@ -202,22 +210,24 @@ export function Main() {
         <ButtonGradient value={"Начать!"} />
       </div>
       <h2 className={styles.centeredText}>
-        {"95% клиентов выбирают mrnet после тест-драйва".toUpperCase()}
+        {"95% клиентов выбирают mrnet".toUpperCase()} <br />
+        {"после тест-драйва".toUpperCase()}
       </h2>
       <TestimonialsSlider />
       <h2 className={styles.centeredText}>
         {"Подключаем к стабильному интернету по всей России".toUpperCase()}
       </h2>
-      <div
-        className={styles.main}
-        style={{
-          border: "1px solid #FF4C00",
-          borderRadius: "8px",
-          padding: "50px",
-          justifyContent: "normal",
-        }}
-      >
-        <img src="/Map_Russia.png" alt="" />
+      <img src="/Map_Russia.png" alt="" className={styles.map} />
+
+      <div className={styles.mapDescription}>
+        <div className={styles.flex}>
+          <div className={styles.squareOne}></div>
+          <span>Наши клиенты</span>
+        </div>
+        <div className={styles.flex}>
+          <div className={styles.squareTwo}></div>
+          <span>Отделы продаж</span>
+        </div>
       </div>
       <section className={styles.main}>
         <div
@@ -288,7 +298,6 @@ export function Main() {
           <ButtonGradient value={"Начать!"} />
         </form>
       </section>
-      {/* <Test /> */}
     </>
   );
 }

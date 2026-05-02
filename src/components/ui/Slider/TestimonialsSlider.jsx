@@ -79,7 +79,9 @@ export default function TestimonialsSlider() {
           onClick={prevSlide}
           disabled={currentIndex === 0}
           className="nav-btn prev"
-        ></button>
+        >
+          &lt;
+        </button>
 
         <div className="dots">
           {testimonials.map((_, i) => (
@@ -95,7 +97,9 @@ export default function TestimonialsSlider() {
           onClick={nextSlide}
           disabled={currentIndex === testimonials.length - 1}
           className="nav-btn next"
-        ></button>
+        >
+          &gt;
+        </button>
       </div>
     </div>
   );

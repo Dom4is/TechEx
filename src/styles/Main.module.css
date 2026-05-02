@@ -11,7 +11,8 @@
   border: 1px solid #ff4c00;
   border-radius: 8px;
   padding: 20px;
-  padding-right: 40px;
+  /* padding-right: 40px; */
+  min-width: 448px;
 }
 
 .list {
@@ -148,7 +149,7 @@
 }
 
 .netForm {
-  padding: 20px;
+  padding: 20px 30px;
   background: linear-gradient(45deg, #000000, #000000, #00e4f0);
   border-radius: 8px;
   border: 1px solid #00e4f0;
@@ -162,4 +163,37 @@
 .checkboxGroup input[type="checkbox"] {
   width: 20px;
   height: 20px;
+}
+
+.map {
+  border: 1px solid #ff4c00;
+  border-radius: 8px;
+  margin: 36px;
+  padding: 40px;
+}
+
+.mapDescription {
+  display: flex;
+  /* margin: 20px auto; */
+  gap: 40px;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.squareOne {
+  width: 10px;
+  height: 10px;
+  background-color: #ff4c00;
+  rotate: -45deg;
+}
+
+.squareTwo {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
 }
