@@ -2,8 +2,10 @@ import styles from "./Footer.module.css";
 export function Footer() {
   return (
     <>
-      <footer style={{ margin: "36px" }}>
-        <h4>{"Дефолтный подвал".toUpperCase()}</h4>
+      <footer style={{ margin: "110px 36px 80px 36px" }}>
+        <h4 style={{ marginBottom: "36px" }}>
+          {"Дефолтный подвал".toUpperCase()}
+        </h4>
         <div className={styles.text}>
           <span className={styles.info}>
             ООО «Ньюком Дистрибьюшн»,
